@@ -1,0 +1,15 @@
+#!/bin/bash -l
+#PBS -N sam_summary
+#PBS -j oe
+#PBS -l walltime=12:00:00
+#PBS -l mem=3GB
+#PBS -l vmem=20GB
+#PBS -A ucl/BioinfCompBio/MRC_TRANSL
+
+# the script has to pass the following variables
+# workplace
+# samfile
+
+cd $workplace
+
+perl $HOME/applications/scripts/sam_summary.pl -sam $samfile

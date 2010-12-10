@@ -1,0 +1,14 @@
+#!/bin/bash -l
+#PBS -N sam_sum_collect
+#PBS -j oe
+#PBS -l walltime=2:00:00
+#PBS -l mem=3GB
+#PBS -l vmem=20GB
+#PBS -A ucl/BioinfCompBio/MRC_TRANSL
+
+# the script has to pass the following variables
+# extension
+# output
+# workplacelist
+
+perl $HOME/applications/scripts/sam_summary_collector.pl -workplacelist $workplacelist -ext $extension -output $output
